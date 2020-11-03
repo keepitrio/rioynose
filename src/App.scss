@@ -1,0 +1,192 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+}
+
+.home-page-intro-container {
+  display: flex;
+  flex-direction: row;
+
+  @media (min-width: 600px) {
+    .home-page-intro-container .info .intro-container .contact-box {
+      position: absolute;
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 600px) {
+    width: 100vh;
+    .rio-image {
+      display: none;
+    }
+
+    .right-panel-container {
+      height: 100vh;
+
+      .intro {
+        position: absolute;
+        left: 0;
+        top: 20px;
+      }
+    }
+
+    .home-page-intro-container .info .intro-container .contact-box {
+      h3 {
+        font-size: 14px;
+      }
+
+      a {
+        font-size: 12px;
+      }
+    }
+
+    .headline {
+      font-weight: 100;
+      line-height: 2;
+      font-size: 12px;
+    }
+
+    h1 {
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: 1429px) {
+    .headline {
+      font-weight: 100;
+      line-height: 2;
+      font-size: 22px;
+    }
+
+    .rio-image-container {
+      height: 100vh;
+      background: black;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    .info .intro-container .intro .headline {
+      font-weight: 100;
+      line-height: 2;
+      font-size: 18px;
+    }
+
+    .right-panel-container {
+      background: none;
+
+      .overlay {
+        opacity: 1;
+      }
+    }
+
+    .rio-image-container {
+      background: black;
+      height: 100vh;
+      width: 100vw;
+
+      .rio-image {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 1515px) {
+    .right-panel-container {
+      background: none;
+      .overlay {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.right-panel-container {
+  background-image: url('./images/ocean.jpg');
+  background-size: cover;
+  height: 100vh;
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: black;
+    opacity: 0.8;
+  }
+
+  .right-panel {
+    height: 100%;
+    .info {
+      color: white;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.info {
+  height: 100%;
+  .intro-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .intro {
+      padding-left: 50px;
+      padding-top: 50px;
+      font-family: 'Trispace', sans-serif;
+      width: 60%;
+      z-index: 2;
+      flex-grow: 1;
+
+      .headline {
+        font-weight: 100;
+        line-height: 2;
+        font-size: 22px;
+      }
+    }
+
+    .contact-box {
+      padding-left: 50px;
+      padding-top: 50px;
+      font-family: 'Trispace', sans-serif;
+      z-index: 2;
+      flex-grow: 2;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      text-align: right;
+
+      a {
+        display: block;
+        color: white;
+        line-height: 2;
+      }
+    }
+  }
+}
+
+.rio-image-container {
+  width: 80%;
+  height: 100vh;
+  background: black;
+
+  .rio-image {
+    width: 100%;
+  }
+}
+
+.nav {
+  background-color: black;
+  width: 100%;
+  text-align: end;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  a {
+    color: white;
+    margin-right: 25px;
+    text-decoration: none;
+    font-family: 'Trispace', sans-serif;
+  }
+}
